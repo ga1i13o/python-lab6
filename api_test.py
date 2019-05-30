@@ -9,6 +9,6 @@ if __name__=='__main__':
     requests.put(base_uri + '/tasks/15', json={'todo': "Get out of this house"})
     tasks = requests.get(base_uri+'/tasks')
     tasklist = tasks.json()
-
+    print(tasklist)
     for t in tasklist:
         print("{ id:" + str(t['id']) + ", todo: " + t['todo'] + ", urgency: " + t['urgency']+ " }")

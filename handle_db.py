@@ -53,6 +53,7 @@ def remove(id):
                             host="localhost", database="tasklist")
 
     delete_one = "delete from task where id_task=%s;"
+    print(id)
     cursor = conn.cursor()
     cursor.execute(delete_one, (id,))
     conn.commit()
